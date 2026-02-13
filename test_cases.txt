@@ -1,0 +1,233 @@
+Matrix and Vector operation test cases :
+
+-------------------------------------------------
+
+=Matrix Operation :
+
+==Addition & Subtraction
+
+matrix A (2*2):
+1 2
+3 4
+
+matrix B (2*2):
+5 6
+7 8
+
+A + B:
+6  8
+10 12
+
+A - B:
+-4 -4
+-4 -4
+
+-Error Example-
+
+matrix A (2*3):
+1 2 3
+4 5 6
+
+matrix B (2*2):
+1 2
+3 4
+
+Result : Error: Dimensions do not match.
+
+==Multiplication
+
+matrix A (2*3):
+1 2 3
+4 5 6
+
+matrix B (3*2):
+7  8
+9  10
+11 12
+
+A * B:
+58  64
+139 154
+
+-Error-
+matrix A (2*2):
+1 2
+3 4
+
+matrix B (3*2):
+1 2
+3 4
+5 6
+
+Result : Error: Invalid dimensions for multiplication.
+
+==Scalar
+
+matrix A (2*2):
+1 2
+3 4
+
+scalar: -3
+
+-3 * A:
+-3 -6
+-9 -12
+
+==Transpose
+
+matrix A (2*3):
+1 2 3
+4 5 6
+
+transpose of A (3*2):
+1 4
+2 5
+3 6
+
+==Determinant
+
+matrix A (2*2):
+4 7
+2 6
+
+determinant = 10
+
+(Recursive)
+
+matrix A (3*3):
+1 2 3
+0 1 4
+5 6 0
+
+determinant = 1
+
+-Error Example-
+
+matrix A (2*3):
+1 2 3
+4 5 6
+
+Result: Error: Matrix must be square for determinant.
+
+==Inverse
+
+matrix A (2*2):
+4 7
+2 6
+
+determinant = 10
+
+inverse A:
+0.6  -0.7
+-0.2  0.4
+
+(Adjoint)
+
+matrix A (3*3):
+1 2 3
+0 1 4
+5 6 0
+
+determinant = 1
+
+inverse A:
+-24  18   5
+20  -15  -4
+-5   4    1
+
+-Error Examples-
+matrix A (3*2):
+1 2
+3 4
+5 6
+
+Result: Error: Matrix must be square.
+
+matrix A (2*2):
+1 2
+2 4
+
+determinant = 0
+
+Result: Error: Determinant is zero.Matrix has no inverse.
+
+-------------------------------------------------------------------------------------
+
+=Vector Operation :
+
+==Addition & Subtraction & Dot Product
+Vector A: [1 2 3 4]
+Vector B: [5 6 7 8]
+
+A + B: [6 8 10 12]
+A - B: [-4 -4 -4 -4]
+Dot Product = 70
+
+-Error Example-
+Vector A: [1 2 3]
+Vector B: [1 2 3 4]
+
+Result: Error: Vector sizes must match for addition, subtraction & dot product
+
+==Scalar
+Vector A: [1 2 3]
+Scalar: 2.5
+
+2.5 * A: [2.5 5 7.5]
+
+==Cross Product
+Vector A: [1 2 3]
+Vector B: [4 5 6]
+
+Cross Product = [-3, 6, -3]
+
+-Error Examples-
+Vector A: [1 2]
+Vector B: [3 4]
+
+Result: Error: only 3D vectors.
+
+Vector A: [1 2 3]
+Vector B: [4 5]
+
+Result: Error: only 3D vectors.
+
+==Magnitude
+Vector A: [3 4 0]
+
+Magnitude = 5
+
+==Normalization
+Vector A: [3 4 0]
+magnitude = 5
+
+Normalized = [0.6, 0.8, 0]
+
+-Error Example-
+Vector A: [0 0 0]
+magnitude = 0
+
+Result: Error: Cannot normalize zero vector.
+
+----------------------------------------------------------------------
+
+=Maximum size error
+matrix A (6×4):
+[invalid input]
+
+Vector A:
+[1 2 3 4 5 6]
+
+Result: Error: Maximum size is 5.
+
+
+=Non-posotive size error
+matrix A (0×2):
+[invalid input]
+
+Result: Error: Dimensions must be positive.
+
+=Invalid choice
+user's input: 3
+
+Result: Error: Invalid choice.
